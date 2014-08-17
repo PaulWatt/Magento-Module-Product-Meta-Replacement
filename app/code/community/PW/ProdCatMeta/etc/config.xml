@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <PW_ProdCatMeta>
+            <version>1.0.0</version>
+        </PW_ProdCatMeta>
+    </modules>
+    <global>
+        <models>
+            <PW_ProdCatMeta>
+                <class>PW_ProdCatMeta_Model</class>
+            </PW_ProdCatMeta>
+        </models>
+    </global>
+    <frontend>
+        <events>
+            <catalog_controller_product_view>
+                <observers>
+                    <PW_ProdCatMeta>
+                        <class>PW_ProdCatMeta/Observer</class>
+                        <method>productView</method>
+                    </PW_ProdCatMeta>
+                </observers>
+            </catalog_controller_product_view>
+        </events>
+    </frontend>
+</config>
